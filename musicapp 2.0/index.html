@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Mobile Music App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="homeScreen" class="screen active">
+        <button class="skip-button" aria-label="Skip to next screen">Skip</button>
+        <div class="headphones"></div>
+        <h1 class="app-title">ZEEZ</h1>
+        <p class="app-description">MAD JAMS!</p>
+        <div class="progress-dots">
+            <div class="dot active"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
+    <div id="artistScreen" class="screen">
+        <div class="artist-card">
+            <div class="artist-info">
+                <div class="artist-name">Burna Boy</div>
+                <div class="stream-count">1,322,799,000 Streams</div>
+            </div>
+            <button class="follow-button">Follow +</button>
+        </div>
+        <div class="section-title">
+            Top Mix <a href="#" class="see-all">See all</a>
+        </div>
+        <div class="mix-container">
+            <div class="mix-item">
+                <img src="/assets1/images/beninboys123.png" alt="Benin Boys">
+                <div class="mix-title">Benin Boys</div>
+            </div>
+            <div class="mix-item">
+                <img src="/assets1/images/stubborn123.png" alt="Stubborn">
+                <div class="mix-title">Stubborn</div>
+            </div>
+        </div>
+        <div class="section-title">
+            Recently Played <a href="#" class="see-all">See all</a>
+        </div>
+        <div class="track" data-title="Kante" data-artist="Davido ft Fave" data-src="/assets1/music/spotifydown.com - KANTE (feat. Fave).mp3" data-album-art="/assets1/images/kante.png">
+            <img src="/assets1/images/kante.png" alt="Kante">
+            <div class="track-info">
+                <p class="track-name">Kante</p>
+                <p class="track-artist">Davido ft Fave</p>
+            </div>
+        </div>
+        <div class="track" data-title="Normal" data-artist="Burna Boy" data-src="/assets1/music/spotifydown.com - Normal.mp3" data-album-art="/assets1/images/normal123.png">
+            <img src="/assets1/images/normal123.png" alt="Normal">
+            <div class="track-info">
+                <p class="track-name">Normal</p>
+                <p class="track-artist">Burna Boy</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="nowPlayingScreen" class="screen">
+        <button class="back-button">◀</button>
+        <div class="now-playing">
+            <img class="album-art" src="" alt="Album Art">
+            <div class="song-info">
+                <h2 class="song-title"></h2>
+                <p class="song-artist"></p>
+            </div>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <div class="time-info">
+                <span class="current-time">0:00</span>
+                <span class="total-time">0:00</span>
+            </div>
+            <div class="player-controls">
+                <img src="/assets1/images/arrows_14871334.png" alt="Shuffle" class="player-icon shuffle">
+                <img src="/assets1/images/backward_14656394.png" alt="Previous" class="player-icon previous">
+                <img src="/assets1/images/play-button_14656376.png" alt="Play" class="player-icon play">
+                <img src="/assets1/images/pause-button_11146098.png" alt="Pause" class="player-icon pause">
+                <img src="/assets1/images/forward-button_14656388.png" alt="Next" class="player-icon next">
+                <img src="/assets1/images/repeat_7108971.png" alt="Repeat" class="player-icon repeat">
+            </div>
+            
+            
+            <div class="volume-control">
+                <label for="volumeSlider"></label>
+                <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1">
+            </div>
+        </div>
+    </div>
+    
+
+    <audio id="audioPlayer"></audio>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
